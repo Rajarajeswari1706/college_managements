@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('kings-college-cambridge-uk-university.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-text-black">
+  <div class="w3-display-topright w3-display-topleft">
+    <h1> COLLEGE MANAGEMENT SYSTEM</h1>
+  </div>
+  <div class="w3-display-bottommiddle w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('register').style.display='block'" class="w3-button w3-red">Register</button></p>
+    <p><button onclick="document.getElementById('login').style.display='block'" class="w3-button w3-red">Login</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">monday - friday 9:00AM - 4:00PM</p>
+    <p class="w3-large">Pondicherry</p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="register" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Student Register</h1>
+    </div>
+    <div class="w3-container">
+        <p>Please Register !!!</p>
+        <form>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="USN" required name="USN"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><label class="w3-input w3-padding-16 w3-border" for="branch">BRANCH
+              <select id="selectbasic" name="branch" class="form-control">
+                <option value="mca">BCA</option>
+                <option value="mba">BBA</option>
+                <option value="cs">CS</option>
+                <option value="mtech">Bsc</option>
+              </select>
+            </label></p>
+
+          <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Semester" required name="Semester"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="password" placeholder="password" required name="password"></p>
+          <p><button class="w3-button" type="submit" onclick="myFunction()" >Register</button></p>
+              <div class="w3-display-bottomright w3-container w3-medium">
+                  <p><button class="w3-button" type="submit" onclick="window.location.href ='index.html';">BACK</button></p></div>
+          <script>
+                    function myFunction() {
+                      alert("Successfully Registered!");
+                    }
+           </script>
+        </form>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="login" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>LOGIN</h1>
+    </div>
+    <div class="w3-container">
+      <p>Please login using USN and PASSWORD</p>
+      <form action="college.html" method="post">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="password" placeholder="password" required name="password"></p>
+        <p><button class="w3-button" type="submit" onclick="window.location.href ='college.html';">LOGIN</button></p>
+            <div class="w3-display-bottomright w3-container w3-medium">
+                <p><button class="w3-button" type="submit" onclick="window.location.href ='index.html';">BACK</button></p></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
